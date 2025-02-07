@@ -6,7 +6,7 @@ export const fetchAirports = async (setAirports) => {
     const response = await axios.get(url);
 
     setAirports(response.data.data);
-    // console.log("Fetched Airports:", response.data);
+    console.log("Fetched Airports:", response.data);
   } catch (error) {
     console.error(
       "Error Fetching Airports:",
