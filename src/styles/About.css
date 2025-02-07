@@ -1,0 +1,39 @@
+/* section-about-us */
+
+.about-container {
+  overflow-y: hidden;
+  /* font-family: Arial, sans-serif; */
+  line-height: 1.6;
+  color: #333;
+  max-width: 100%;
+  background: linear-gradient(to bottom, #dbeafe, #eff6ff, #ffffff);
+}
+
+.section-about-us {
+  background: linear-gradient(to bottom, #dbeafe, #eff6ff, #ffffff);
+}
+
+.header {
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about-text {
+  margin-bottom: 15px;
+}
+
+.mission {
+  background: #002060;
+  color: white;
+  border-radius: 7px;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.mission b {
+  color: #ffcc00;
+}

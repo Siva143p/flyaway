@@ -1,0 +1,150 @@
+.nav-links {
+  display: block;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 1%; */
+  /* padding-bottom: 1%; */
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right img {
+  width: 24px;
+  height: 24px;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  /* background-color: antiquewhite; */
+}
+
+.Navbar ul {
+  /* display: flex; */
+  /* align-items: center; */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Navbar ul li {
+  /* display: flex; */
+  align-items: center;
+  gap: 8px;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.Navbar ul li img.call {
+  height: 24px;
+  width: 24px;
+}
+
+.Navbar ul li span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  /* width: 70%; */
+}
+
+.custom-link {
+  /* color: black; */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.custom-link:hover {
+  /* color: #ff7f00; */
+}
+
+.Navbar ul li:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+/* .menu {
+  display: flex;
+} */
+
+.menu li {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .Navbar {
+    position: relative;
+  }
+  .Navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #e8e8e8;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+    z-index: 50;
+  }
+
+  .Navbar ul li a {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    padding: 0.5rem 0;
+  }
+  .Navbar ul.active {
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .hide-left {
+    display: none;
+  }
+}

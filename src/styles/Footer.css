@@ -1,0 +1,87 @@
+/* links-contact */
+
+.footer-container{
+  margin-top: 10%;
+}
+
+.footer {
+  background-color: #003366;
+  color: #fff;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section img {
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: orange;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+
+}
+
+.footer-section address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.payment-icons i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.social-icons ul li{
+  display: inline;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.social-media-icons img{
+  border-radius: 13px;
+  height: 25px;
+  width: 25px;
+}

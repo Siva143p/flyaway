@@ -1,0 +1,130 @@
+.container {
+  /* width: 40%; */
+  background-color: #003366;
+  border-radius: 25px;
+  color: #ffffff;
+  /* font-family: "Arial, sans-serif"; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 6%;
+}
+
+/* .get-a-quote-header {
+  background-color: #ff7f32;
+  padding: 2px;
+  border-radius: 25px 25px 0 0;
+  text-align: center;
+} */
+
+.container h2 {
+  text-align: center;
+  background-color: #ff7f32;
+  border-radius: 5px;
+  color: #ffffff;
+  /* font-size: 2rem !important; */
+}
+
+.form {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+label {
+  font-weight: bold;
+}
+
+select,
+.input,
+.promo-code-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.airport-selection {
+  margin-bottom: 15px;
+}
+
+.container input {
+  background: transparent;
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.inline > div {
+  flex: 1;
+}
+
+.promo-code {
+  margin-bottom: 15px;
+}
+
+.promo-code-input {
+  background-color: #ffffff !important;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  /* margin-top: 20px; */
+  /* margin-bottom: 40px; */
+  /* padding: 10px; */
+  background-color: #ff7f32;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.clock-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .inline {
+    flex-direction: column;
+  }
+
+  .promo-code-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0px;
+  }
+
+  .container h2 {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
+  select,
+  .input,
+  .promo-code-input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .submit {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
