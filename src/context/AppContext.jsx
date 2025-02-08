@@ -5,7 +5,7 @@ const AppContext = createContext();
 // eslint-disable-next-line react/prop-types
 export function AppProvider({ children }) {
   const topComponentRef = useRef(null);
-  const [airport, setAirport] = useState("");
+  // const [airport, setAirport] = useState("");
   const [loading, setLoading] = useState(false);
 
   const scrollToTop = () => {
@@ -17,10 +17,10 @@ export function AppProvider({ children }) {
 
   const contextValue = {
     scrollToTop,
-    setAirport,
+    // setAirport,
     setLoading,
     loading,
-    airport,
+    // airport,
     topComponentRef,
   };
 

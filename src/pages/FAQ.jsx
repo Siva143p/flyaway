@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/components/ui/accordion";
+import SEO from "@/SEO/SEO";
 
 const FAQ = () => {
   const [openItem, setOpenItem] = useState(null);
@@ -49,6 +50,13 @@ const FAQ = () => {
 
   return (
     <div className="w-container-fluid bg-gradient-to-b from-blue-300 pt-14">
+      <SEO
+        title="FAQs - Flyaway Parking"
+        description="Find answers to frequently asked questions about Flyaway Parking."
+        keywords="flyaway parking FAQ, airport parking questions"
+        canonical="https://flyawayparking.co.uk/FAQ"
+      />
+
       <div className="max-w-container mx-auto">
         <div className="w-[80%] max-md:w-[95%] bg-white mx-auto px-6 py-10 rounded-lg shadow-lg">
           <div className="">

@@ -11,7 +11,7 @@ const Service = () => {
       text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel atque quas deserunt beatae. Ullam, aspernatur non odit magnam provident.`,
     },
     {
-      img: "/src/assets/imgs/ParkandRide.svg.svg",
+      img: "/src/assets/imgs/ParkandRide.svg",
       title: "Park And Ride",
       text: `Enjoy convenient and cost-effective parking options with our Park and Ride service. Park in secure lots and take a quick shuttle to the airport.`,
     },

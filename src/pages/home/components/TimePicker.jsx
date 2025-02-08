@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Clock } from "lucide-react";
 import "@/styles/TimePicker.css";
+import { cn } from "@/components/lib/utils";
 
-const TimePicker = ({ onTimeSelect }) => {
+const TimePicker = ({ onTimeSelect, className }) => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectedTime, setSelectedTime] = useState("");
+  const [selectedTime, setSelectedTime] = useState("00:00");
 
   const generateTimeSlots = () => {
     const times = [];
@@ -30,7 +31,7 @@ const TimePicker = ({ onTimeSelect }) => {
 
   return (
     <div
-      className="timepicker-container mt-2"
+      className={cn(className, "timepicker-container mt-2")}
       onClick={() => setShowDropdown(!showDropdown)}
     >
       <div className="input-wrapper">

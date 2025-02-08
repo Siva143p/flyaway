@@ -4,10 +4,12 @@ import { Card, CardContent } from "../components/components/ui/card";
 import "@/styles/CustomerReview.css";
 import { FaQuoteRight } from "react-icons/fa6";
 import { useAppContext } from "@/context/AppContext";
+import useStore from "@/store/store";
 
 // eslint-disable-next-line react/prop-types
 const AirportCard = ({ item }) => {
-  const { scrollToTop, setAirport } = useAppContext();
+  const { scrollToTop } = useAppContext();
+  const { setAirport } = useStore();
   const [expandedCard, setExpandedCard] = useState(null);
 
   const clickHandler = (Airport) => {

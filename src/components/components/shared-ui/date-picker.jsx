@@ -10,8 +10,8 @@ export function DatePickerDemo({ className, initialDate, onclick }) {
   const [date, setDate] = React.useState(initialDate);
 
   React.useEffect(() => {
-    const selectedDtae = date.toISOString().split("T")[0];
-    onclick(selectedDtae);
+    // const selectedDtae = date.toISOString().split("T")[0];
+    onclick(date);
   }, [date]);
 
   return (

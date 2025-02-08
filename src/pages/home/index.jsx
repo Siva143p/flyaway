@@ -9,6 +9,7 @@ import FlyawayParking from "./components/FlyawayParking";
 import CustomerReview from "./components/CustomerReview";
 import { useAppContext } from "@/context/AppContext";
 import SEO from "@/SEO/SEO";
+import Search from "../Search";
 const Home = () => {
   const { topComponentRef } = useAppContext();
 
@@ -43,6 +44,7 @@ const Home = () => {
         <CheapestAirport />
         <FlyawayParking />
         <CustomerReview />
+        {/* <Search /> */}
       </div>
     </div>
   );

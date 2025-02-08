@@ -8,10 +8,10 @@ import {
   SelectValue,
 } from "../ui/select";
 import { cn } from "@/components/lib/utils";
-import { useAppContext } from "@/context/AppContext";
+import useStore from "@/store/store";
 
 export function CustomSelect({ data, className, title }) {
-  const { setAirport, airport } = useAppContext();
+  const { airport, setAirport } = useStore();
 
   const selectedAirport = airport ? JSON.stringify(airport) : "";
 

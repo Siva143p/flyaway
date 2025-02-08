@@ -31,14 +31,30 @@ const Navbar = () => {
   ];
 
   const Social = [
-    { name: "Facebook", img: "/src/assets/imgs/facebook.png", link: "" },
-    { name: "X", img: "/src/assets/imgs/x.png", link: "" },
-    { name: "Instagram", img: "/src/assets/imgs/insta.png", link: "" },
-    { name: "Linkedin", icon: (props) => <FaLinkedin {...props} />, link: "" },
+    {
+      name: "Facebook",
+      img: "/src/assets/imgs/facebook.png",
+      link: "https://www.facebook.com/share/18BUJNE388/",
+    },
+    {
+      name: "X",
+      img: "/src/assets/imgs/x.png",
+      link: "https://x.com/ParkingFlyaway",
+    },
+    {
+      name: "Instagram",
+      img: "/src/assets/imgs/insta.png",
+      link: "https://www.instagram.com/flyaway.parking/",
+    },
+    {
+      name: "Linkedin",
+      icon: (props) => <FaLinkedin {...props} />,
+      link: "https://linkedin.com/company/flyaway-parking",
+    },
     {
       name: "Youtube",
       icon: (props) => <IoLogoYoutube {...props} />,
-      link: "",
+      link: "https://www.youtube.com/@FlyawayParking",
     },
   ];
 
@@ -67,7 +83,7 @@ const Navbar = () => {
             {Social.map((item, index) => (
               <div key={item.name} className="flex gap-2 items-center">
                 <a
-                  href="#"
+                  href={item.link}
                   className={`${
                     item.name === "X" ? "block bg-white rounded-full" : ""
                   }`}

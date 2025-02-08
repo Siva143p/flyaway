@@ -16,6 +16,7 @@ import {
   RadioGroupItem,
 } from "@/components/components/ui/radio-group";
 import { Button } from "@/components/components/ui/button";
+import SEO from "@/SEO/SEO";
 const ContactUs = () => {
   const Social = [
     { icon: (props) => <RiTwitterXFill {...props} />, link: "#" },
@@ -42,6 +43,13 @@ const ContactUs = () => {
   ];
   return (
     <div className="w-container-fluid bg-gradient-to-b from-blue-300 pt-4">
+      <SEO
+        title="Contact Us - Flyaway Parking"
+        description="Get in touch with Flyaway Parking for any inquiries or support."
+        keywords="contact flyaway parking, customer support"
+        canonical="https://flyawayparking.co.uk/ContactUs"
+      />
+
       <div className="max-w-[80rem] mx-auto">
         <h1 className="text-h1 leading-h1 font-bold">Contact Us</h1>
         <p className="text-p leading-p text-gray-600">
@@ -49,7 +57,7 @@ const ContactUs = () => {
         </p>
 
         {/* card */}
-        <Card className="w-[80%] max-xl:w-[90%] max-lg:w-[80%] max-md:w-[90%] lg:h-[80vh] xl:h-[36rem] bg-white shadow-lg rounded-lg mx-auto overflow-hidden mt-4">
+        <Card className="w-[80%] max-xl:w-[90%] max-lg:w-[80%] max-md:w-[90%] lg:!h-[88vh] xl:h-[36rem] bg-white shadow-lg rounded-lg mx-auto overflow-hidden mt-4">
           <CardContent className="w-full h-full p-0 flex max-lg:flex-col">
             <section className="w-[40%] max-lg:w-full max-lg:h-[80vh] max-md:items-center h-full bg-[#3354E5] rounded-r-lg p-8 flex flex-col justify-between text-left text-white relative overflow-hidden">
               <div>

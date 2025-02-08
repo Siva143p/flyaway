@@ -6,14 +6,34 @@ import { CustomSelect } from "@/components/components/shared-ui/custom-select";
 import { useAppContext } from "@/context/AppContext";
 import { addDays } from "date-fns";
 import { fetchAirports, findParkingDeals } from "@/api/api";
+import useStore from "@/store/store";
+import { useNavigate } from "react-router-dom";
+//
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { formatDate } from "@/util";
 const GetAQuote = () => {
-  const { airport } = useAppContext();
-  const [dropTime, setDropTime] = useState("00:00");
-  const [pickUPTime, setPickUPTime] = useState("00:00");
-  const [dropDate, setDropDate] = useState();
-  const [pickUPDate, setPickUpDate] = useState();
+  const {
+    airport,
+    dropTime,
+    setDropTime,
+    dropDate,
+    setDropDate,
+    pickUPTime,
+    setPickUPTime,
+    pickUPDate,
+    setPickUpDate,
+    setSearchResults,
+    airports,
+    setAirports,
+  } = useStore();
+  const navigate = useNavigate();
+  const { loading, setLoading } = useAppContext();
+  // const [dropTime, setDropTime] = useState("00:00");
+  // const [pickUPTime, setPickUPTime] = useState("00:00");
+  // const [dropDate, setDropDate] = useState();
+  // const [pickUPDate, setPickUpDate] = useState();
 
-  const [airports, setAirports] = useState();
+  // const [airports, setAirports] = useState();
 
   // const Airports = [
   //   { id: "BHX", name: "Birmingham" },
@@ -40,21 +60,29 @@ const GetAQuote = () => {
     e.preventDefault();
 
     if (!airport || !airport.id) {
-      alert("Please Select Airport");
+      alert("Please Select an Airport");
       return;
     }
+    setLoading(true);
 
     const requestData = {
       airport_id: airport.id,
-      drop_off_date: dropDate,
+      drop_off_date: formatDate(dropDate),
       drop_off_time: dropTime,
-      pick_up_date: pickUPDate,
+      pick_up_date: formatDate(pickUPDate),
       pick_up_time: pickUPTime,
       phone_number: "",
       discount_code: airport.discount_code,
     };
 
-    findParkingDeals({ requestData });
+    console.log("====================================");
+    console.log(requestData);
+    console.log("====================================");
+
+    await findParkingDeals({ requestData }, setSearchResults);
+    setLoading(false);
+    navigate("/Search");
+    // setSearchResults();
   };
 
   useEffect(() => {
@@ -121,8 +149,15 @@ const GetAQuote = () => {
               />
             </div>
 
-            <button className="submit py-3 my-6" type="submit">
-              FIND PARKING DEALS
+            <button
+              className="w-full bg-primary-highlight font-bold py-3 my-6 flex justify-center items-center"
+              type="submit"
+            >
+              {loading ? (
+                <AiOutlineLoading3Quarters className="w-5 h-5 animate-spin" />
+              ) : (
+                "FIND PARKING DEALS"
+              )}
             </button>
           </form>
         </div>

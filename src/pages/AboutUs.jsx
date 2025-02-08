@@ -1,5 +1,6 @@
 import React from "react";
 import "@/styles/About.css";
+import SEO from "@/SEO/SEO";
 
 const AboutUs = () => {
   const Aboutus = [
@@ -31,6 +32,13 @@ const AboutUs = () => {
   ];
   return (
     <div className="w-container-fluid bg-gradient-to-b from-blue-300">
+      <SEO
+        title="About Us - Flyaway Parking"
+        description="Learn more about Flyaway Parking and our mission to provide secure and affordable airport parking."
+        keywords="about flyaway parking, airport parking services"
+        canonical="https://flyawayparking.co.uk/AboutUs"
+      />
+
       <div className="max-w-container px-[6vh] xl:px-[15vh] mx-auto pt-10">
         <div className="">
           <h1 className="text-primary-highlight text-h1 leading-h1 font-bold">
