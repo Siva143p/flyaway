@@ -9,7 +9,8 @@ import FlyawayParking from "./components/FlyawayParking";
 import CustomerReview from "./components/CustomerReview";
 import { useAppContext } from "@/context/AppContext";
 import SEO from "@/SEO/SEO";
-import Search from "../Search";
+// import Search from "../Search";
+import bgImg from "@/assets/imgs/poster.png";
 const Home = () => {
   const { topComponentRef } = useAppContext();
 
@@ -29,10 +30,10 @@ const Home = () => {
       <div
         className="w-full"
         style={{
-          background: `linear-gradient(to right, rgba(13, 1, 54, 0.6), rgba(11, 1, 46, 0.6)), url("/src/assets/imgs/poster.png")`,
+          background: `linear-gradient(to right, rgba(13, 1, 54, 0.6), rgba(11, 1, 46, 0.6)), url(${bgImg})`,
         }}
       >
-        <div className="get-quote-parking flex justify-between items-center pr-[2vh] max-[990px]:!flex-col py-4 max-w-container mx-auto">
+        <div className="get-quote-parking flex justify-between items-center pr-[2vh] max-[990px]:!flex-col-reverse py-4 max-w-container mx-auto">
           <GetAQuote />
           <ParkingInfo />
         </div>

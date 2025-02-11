@@ -99,7 +99,7 @@ const GetAQuote = () => {
   return (
     <div className="container w-[636px] max-lg:w-[70%]  max-sm:w-[96%] overflow-hidden bg-slate-400">
       <div className="bg-[#ff7f32] py-2 text-2xl font-bold">
-        <h2 className="text-[32px] font-bold py-3">GET A QUOTE</h2>
+        <h2 className="!text-[32px] font-bold py-3">GET A QUOTE</h2>
       </div>
       <div>
         <div className="form">
@@ -113,27 +113,27 @@ const GetAQuote = () => {
                 title={"Airport"}
               />
             </div>
-            <div className="flex gap-5 items-center">
-              <div className="flex flex-col w-[50%]">
+            <div className="md:flex gap-5 items-center">
+              <div className="flex flex-col w-[50%] max-md:w-full">
                 <label htmlFor="drop-off-date">Drop Off</label>
 
                 <DatePickerDemo initialDate={today} onclick={setDropDate} />
               </div>
-              <div className="drop-off w-[50%]">
+              <div className="drop-off w-[50%] max-md:w-full max-md:mt-4">
                 <label htmlFor="drop-off-time">Time</label>
 
                 <TimePicker onTimeSelect={setDropTime} />
               </div>
             </div>
-            <div className="flex my-4 gap-5 items-center">
-              <div className="flex flex-col w-[50%]">
+            <div className="md:flex my-4 gap-5 items-center">
+              <div className="flex flex-col w-[50%] max-md:w-full">
                 <label htmlFor="">Pick Up Date</label>
                 <DatePickerDemo
                   initialDate={futureDate}
                   onclick={setPickUpDate}
                 />
               </div>
-              <div className="w-[50%]">
+              <div className="w-[50%] max-sm:w-full max-md:mt-4">
                 <label htmlFor="pick-up-time">Time</label>
 
                 <TimePicker onTimeSelect={setPickUPTime} />

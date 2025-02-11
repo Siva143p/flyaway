@@ -3,7 +3,7 @@ import { create } from "zustand";
 
 const today = new Date();
 
-const useStore = create((set) => ({
+const useStore = create((set, get) => ({
   airport: {},
   setAirport: (airport) => set({ airport }),
 
@@ -16,11 +16,17 @@ const useStore = create((set) => ({
   dropTime: "00:00",
   pickUPTime: "00:00",
   dropDate: today,
-  pickUPDate: addDays(today, 7),
+  pickUPDate: addDays(today, 7), // Default: 7 days from today
 
   setDropTime: (dropTime) => set({ dropTime }),
   setPickUPTime: (pickUPTime) => set({ pickUPTime }),
-  setDropDate: (dropDate) => set({ dropDate }),
+
+  setDropDate: (dropDate) =>
+    set(() => ({
+      dropDate,
+      pickUPDate: addDays(dropDate, 7), // Update pickUPDate when dropDate changes
+    })),
+
   setPickUpDate: (pickUPDate) => set({ pickUPDate }),
 }));
 

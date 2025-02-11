@@ -21,7 +21,7 @@ const AirportCard = ({ item }) => {
   return (
     <Card className="bg-transparent border-none h-full">
       <CardContent className="bg-white rounded-3xl overflow-hidden p-0 group h-full relative">
-        <div className="h-[13rem] overflow-hidden">
+        <div className="h-[13rem] rounded-3xl overflow-hidden">
           <img
             src={item.img}
             alt=""
@@ -33,6 +33,28 @@ const AirportCard = ({ item }) => {
             <h4 className="text-card-hearder leading-card-hearder mt-2 font-bold text-[#485FA0]">
               {item.name}
             </h4>
+            {/*  */}
+            <div className="flex gap-5 items-center mt-3">
+              <div className="flex gap-2 items-center">
+                <span className="mt-1 text-blue-900 font-semibold">
+                  {item.ratings}
+                </span>
+                <div className="flex">
+                  {Array.from({ length: item.ratings }).map((_, index) => (
+                    <FaStar key={index} className="text-[#F57419] w-5 h-5" />
+                  ))}
+                  {!Number.isInteger(item.ratings) && (
+                    <FaStarHalf className="text-[#F57419] w-5 h-5" />
+                  )}
+                </div>
+              </div>
+              <>|</>
+              <span className="text-p font-semibold">
+                {" "}
+                Bookings: {item.bookings}+{" "}
+              </span>
+            </div>
+            {/*  */}
             <div className="h-[7.5rem] max-xl:h-[8.5rem] overflow-y-scroll scroll-smooth scrollbar">
               <p className="my-2 text-p leading-p">
                 {expandedCard === item.name
@@ -53,26 +75,7 @@ const AirportCard = ({ item }) => {
           </div>
           {/*  */}
           <div className="">
-            <div className="flex gap-5 items-center mt-3">
-              <div className="flex gap-2 items-center">
-                <div className="flex">
-                  {Array.from({ length: item.ratings }).map((_, index) => (
-                    <FaStar key={index} className="text-[#F57419] w-5 h-5" />
-                  ))}
-                  {!Number.isInteger(item.ratings) && (
-                    <FaStarHalf className="text-[#F57419] w-5 h-5" />
-                  )}
-                </div>
-                <span className="mt-1 text-blue-900 font-semibold">
-                  {item.ratings}
-                </span>
-              </div>
-              <>|</>
-              <span className="text-p font-semibold">
-                {" "}
-                Bookings: {item.bookings}+{" "}
-              </span>
-            </div>
+            {/*  */}
             <div className="">
               <button
                 onClick={() => clickHandler(item.name)}

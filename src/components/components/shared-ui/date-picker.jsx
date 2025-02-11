@@ -19,7 +19,7 @@ export function DatePickerDemo({ className, initialDate, onclick }) {
       <PopoverTrigger asChild>
         <Button
           className={cn(
-            "text-left font-normal text-gray-300 border-2 border-gray-300 !border-solid text-base justify-between bg-transparent hover:bg-transparent w-full p-0 pl-2 pr-4",
+            "text-left font-normal text-gray-300 border-2 border-gray-300 !border-solid text-base justify-between bg-transparent hover:bg-transparent w-full p-3",
             !date && "text-muted-foreground",
             className
           )}

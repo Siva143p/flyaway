@@ -6,6 +6,18 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FaAddressBook } from "react-icons/fa6";
 import { HiMail } from "react-icons/hi";
 import { FaPhone } from "react-icons/fa6";
+//
+import logo from "@/assets/imgs/Flyaway Logo.png";
+import paypal from "@/assets/imgs/paypal.svg";
+import visa from "@/assets/imgs/visa.svg";
+import mastercard from "@/assets/imgs/mastercard.svg";
+import AMEX from "@/assets/imgs/amex.svg";
+import maestro from "@/assets/imgs/maestro.svg";
+import facebook from "@/assets/imgs/facebook.png";
+import X from "@/assets/imgs/x.png";
+import insta from "@/assets/imgs/insta.png";
+// import paypal from "@/assets/imgs/paypal.svg";
+// import paypal from "@/assets/imgs/paypal.svg";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -34,27 +46,27 @@ const Footer = () => {
   ];
 
   const PaymentLinks = [
-    { img: "/src/assets/imgs/paypal.svg", link: "#", id: "Paypal" },
-    { img: "/src/assets/imgs/visa.svg", link: "#", id: "Visa" },
-    { img: "/src/assets/imgs/maestro.svg", link: "#", id: "Mastercard" },
-    { img: "/src/assets/imgs/amex.svg", link: "#", id: "AMEX" },
-    { img: "/src/assets/imgs/maestro.svg", link: "#", id: "Maestro" },
+    { img: paypal, link: "#", id: "Paypal" },
+    { img: visa, link: "#", id: "Visa" },
+    { img: mastercard, link: "#", id: "Mastercard" },
+    { img: AMEX, link: "#", id: "AMEX" },
+    { img: maestro, link: "#", id: "Maestro" },
   ];
 
   const Socials = [
     {
       name: "Facebook",
-      img: "/src/assets/imgs/facebook.png",
+      img: facebook,
       link: "https://www.facebook.com/share/18BUJNE388/",
     },
     {
       name: "X",
-      img: "/src/assets/imgs/x.png",
+      img: X,
       link: "https://x.com/ParkingFlyaway",
     },
     {
       name: "Instagram",
-      img: "/src/assets/imgs/insta.png",
+      img: insta,
       link: "https://www.instagram.com/flyaway.parking/",
     },
     {
@@ -83,16 +95,16 @@ England N1 7GU`,
       icon: (props) => <HiMail {...props} />,
     },
     {
-      detail: `0044-1963868389`,
+      detail: `1963868389`,
       icon: (props) => <FaPhone {...props} />,
     },
   ];
   return (
     <footer className="mt-20 bg-[#22487F] text-white w-container-fluid">
       <div className="flex max-lg:flex-col lg:gap-5 max-w-container mx-auto p-[6vh]">
-        <div className="!w-[30%] max-lg:!w-[70%] max-sm:!w-full flex flex-col max-sm:items-center xl:px-[6vh]">
+        <div className="!w-[30%] max-lg:!w-[70%] max-sm:!w-full flex flex-col xl:px-[6vh]">
           <img
-            src="/src/assets/imgs/Flyaway Logo.png"
+            src={logo}
             alt="Logo"
             className="bg-white w-[12rem] rounded-lg"
           />
@@ -133,7 +145,7 @@ England N1 7GU`,
         <div className="w-[60%] max-lg:w-full max-lg:mt-5 flex gap-5 max-sm:flex-col">
           {Footer_content.map((item, index) => (
             <ul
-              className="w-[40%] max-sm:w-full max-sm:text-center text-left max-sm:my-2"
+              className="w-[40%] max-sm:w-full text-left max-sm:my-2"
               key={index}
             >
               <h4 className="text-card-hearder leading-card-hearder font-bold text-primary-highlight">
@@ -152,16 +164,13 @@ England N1 7GU`,
             </ul>
           ))}
 
-          <div className="text-left text-base max-sm:text-center">
+          <div className="text-left text-base">
             <h4 className="text-2xl text-primary-highlight font-bold">
               Contact Us
             </h4>
             <div className="mt-4">
               {ContactUs.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 items-center max-sm:justify-center mb-4"
-                >
+                <div key={index} className="flex gap-4 items-center mb-4">
                   {item.icon ? (
                     item.icon({ className: "w-5 h-5 p-0 m-0" })
                   ) : (
@@ -186,7 +195,7 @@ England N1 7GU`,
           </div>
         </div>
       </div>
-      <div className="border-t-2 border-gray-600 mt-5 pt-4 pb-[6vh] text-gray-400">
+      <div className="border-t-2 text-p border-gray-600 mt-5 pt-4 pb-[6vh] text-gray-400">
         &copy; 2025 Flyaway. All rights reserved.
       </div>
     </footer>

@@ -7,6 +7,12 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 
+import logo from "@/assets/imgs/Flyaway Logo.png";
+import facebook from "@/assets/imgs/facebook.png";
+import X from "@/assets/imgs/x.png";
+import insta from "@/assets/imgs/insta.png";
+import callImg from "@/assets/imgs/call.png";
+
 const Navbar = () => {
   const [status, setStatus] = useState({ isMenuOpen: false, active: "Home" });
   const [hover, setHover] = useState("");
@@ -33,17 +39,17 @@ const Navbar = () => {
   const Social = [
     {
       name: "Facebook",
-      img: "/src/assets/imgs/facebook.png",
+      img: facebook,
       link: "https://www.facebook.com/share/18BUJNE388/",
     },
     {
       name: "X",
-      img: "/src/assets/imgs/x.png",
+      img: X,
       link: "https://x.com/ParkingFlyaway",
     },
     {
       name: "Instagram",
-      img: "/src/assets/imgs/insta.png",
+      img: insta,
       link: "https://www.instagram.com/flyaway.parking/",
     },
     {
@@ -110,11 +116,7 @@ const Navbar = () => {
       </div>
       <div className="nav-links max-w-container mx-auto">
         <nav className="Navbar">
-          <img
-            src="/src/assets/imgs/Flyaway Logo.png"
-            className="w-20 h-16 object-contain"
-            alt="Logo"
-          />
+          <img src={logo} className="w-20 h-16 object-contain" alt="Logo" />
           <ul
             className={`menu ${
               status.isMenuOpen
@@ -161,11 +163,7 @@ const Navbar = () => {
             {!status.isMenuOpen && (
               <li className="phone-container">
                 <a href="tel:+91963868389" className="relative">
-                  <img
-                    src="/src/assets/imgs/call.png"
-                    className="w-9 h-9"
-                    alt="Call Icon"
-                  />
+                  <img src={callImg} className="w-9 h-9" alt="Call Icon" />
                   <div className="animate-ping w-9 h-9 bg-[#1E3A8A] absolute top-0 left-0 rounded-full"></div>
                 </a>
                 <span>

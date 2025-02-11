@@ -1,6 +1,8 @@
 import React from "react";
 import "@/styles/AboutFlyawayParking.css";
 
+import img from "@/assets/imgs/Airport Parking.svg";
+
 function AboutFlyawayParking() {
   return (
     <div className="about-flyaway-parking py-10 sm:py-20 w-full">
@@ -35,7 +37,7 @@ function AboutFlyawayParking() {
                 fill="white"
               ></path>
             </svg>
-            <div className="text-p leading-p font-bold">
+            <div className="text-[24px] leading-[28px] font-bold">
               <p>
                 Trusted by
                 <br /> 2,32,600+
@@ -47,9 +49,9 @@ function AboutFlyawayParking() {
 
         <div className="lg:w-[45%] w-[90%] h-[23rem] mx-auto max-md:px-[4vh] bg-white rounded-lg">
           <img
-            src="/src/assets/imgs/Airport Parking.svg"
+            src={img}
             alt=""
-            className="object-cover w-full h-full shadow-lg rounded-lg"
+            className="object-contain max-sm:object-contain w-full h-full rounded-lg bg-white"
           />
         </div>
       </div>

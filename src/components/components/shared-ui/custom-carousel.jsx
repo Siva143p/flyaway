@@ -32,12 +32,19 @@ export function CustomCarousel({ data, onclick, type }) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious
-        className={`${type === "customer-review" ? "text-black" : ""}`}
-      />
-      <CarouselNext
-        className={`${type === "customer-review" ? "text-black" : ""}`}
-      />
+      {type !== "airport-card" ? (
+        <>
+          {" "}
+          <CarouselPrevious
+            className={`${type === "customer-review" ? "text-black" : ""}`}
+          />
+          <CarouselNext
+            className={`${type === "customer-review" ? "text-black" : ""}`}
+          />
+        </>
+      ) : (
+        ""
+      )}
     </Carousel>
   );
 }

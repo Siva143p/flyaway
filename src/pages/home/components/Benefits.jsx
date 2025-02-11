@@ -1,18 +1,22 @@
 import React from "react";
 import "@/styles/Benefits.css";
+import checkbox from "@/assets/imgs/checkbox.svg";
+import euro from "@/assets/imgs/euro.svg";
+import shield from "@/assets/imgs/shield.svg";
+import help from "@/assets/imgs/customercare.svg";
 
 const Benefits = () => {
   const Benefits = [
-    { img: "/src/assets/imgs/checkbox.svg", text: "Few Easy Booking Steps" },
-    { img: "/src/assets/imgs/euro.svg", text: "Competitive Parking Price" },
-    { img: "/src/assets/imgs/shield.svg", text: "Secure Payment Option" },
+    { img: checkbox, text: "Few Easy Booking Steps" },
+    { img: euro, text: "Competitive Parking Price" },
+    { img: shield, text: "Secure Payment Option" },
     {
-      img: "/src/assets/imgs/customercare.svg",
+      img: help,
       text: "24/7 Customer Support",
     },
   ];
   return (
-    <div className="w-full m-0 mt-6">
+    <div className="w-full m-0 mt-6 max-lg:hidden">
       <p className="text-xl font-semibold">Explore New Places with</p>
       <div className="flex flex-wrap gap-[2%]">
         {Benefits.map((item, index) => (

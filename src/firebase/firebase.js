@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { getApp, getApps, initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 // import firebaseConfig from "./firebase.config";
 
@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: "G-GTM85ZNDQ4",
 };
 
-const app = initializeApp(firebaseConfig);
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 const messaging = getMessaging(app);
 
 // Request Notification Permission and Get Token
@@ -24,8 +24,7 @@ export const requestFCMToken = async () => {
 
     if (permission === "granted") {
       const token = await getToken(messaging, {
-        vapidKey:
-          "YourFirebaseVapidKeyHereBI4aZeo_a9WkQF2BdYm7e6JlojEzAn_aWt6-jw4MA8EzwBh-FaayG25k9hr0ozpmJ3GG2uAODwuiwJO8l420ndE", // Replace with your Firebase VAPID key
+        vapidKey: "", // Replace with your Firebase VAPID key
       });
 
       if (token) {

@@ -36,7 +36,7 @@ const TimePicker = ({ onTimeSelect, className }) => {
     >
       <div className="input-wrapper">
         <input
-          className="time-input !py-1.5"
+          className="time-input !py-[.4rem] max-lg:!py-2.5"
           type="text"
           placeholder="HH:MM:SS"
           value={selectedTime}

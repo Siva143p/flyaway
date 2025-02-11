@@ -1,28 +1,32 @@
 import React, { useState } from "react";
 import "@/styles/Service.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
+//
+import MeetAndGreet from "@/assets/imgs/MeetandGreet.svg";
+import ParkAndRide from "@/assets/imgs/ParkandRide.svg";
+import OnsiteAirportParking from "@/assets/imgs/onsite_Parking.svg";
 
 const Service = () => {
   const [hover, setHover] = useState("");
   const Services = [
     {
-      img: "/src/assets/imgs/MeetandGreet.svg",
+      img: MeetAndGreet,
       title: "Meet And Greet",
       text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel atque quas deserunt beatae. Ullam, aspernatur non odit magnam provident.`,
     },
     {
-      img: "/src/assets/imgs/ParkandRide.svg",
+      img: ParkAndRide,
       title: "Park And Ride",
       text: `Enjoy convenient and cost-effective parking options with our Park and Ride service. Park in secure lots and take a quick shuttle to the airport.`,
     },
     {
-      img: "/src/assets/imgs/onsite_Parking.svg",
+      img: OnsiteAirportParking,
       title: "Onsite Airport Parking",
       text: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum vel atque quas deserunt beatae. Ullam, aspernatur non odit magnam provident.`,
     },
   ];
   return (
-    <div className="w-full px-[8vh] py-8">
+    <div className="w-full px-[8vh] max-sm:px-[4vh] py-8">
       <div className="">
         <p className="text-h2 leading-h2 font-bold">
           We are Providing Excellent
@@ -34,11 +38,11 @@ const Service = () => {
         </p>
       </div>
       {/*  */}
-      <div className="max-w-container mx-auto flex flex-wrap justify-between my-4 w-full">
+      <div className="max-w-container mx-auto flex flex-wrap justify-between my-4 !w-full">
         {/*  */}
         {Services.map((service, index) => (
           <div
-            className="w-[368px] h-[450px] bg-white rounded-lg relative overflow-hidden shadow-md my-2 mx-auto group"
+            className="w-[368px] max-sm:!w-full h-[450px] bg-white rounded-lg relative overflow-hidden shadow-md my-2 mx-auto group"
             onMouseEnter={() => setHover(service.title)}
             onMouseLeave={() => setHover("")}
             key={index}
